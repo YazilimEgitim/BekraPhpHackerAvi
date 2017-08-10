@@ -3,7 +3,7 @@ class veriler{
 	
 public  function veri_ekle($hackerip,$attackquery,$attackthetime,$Attackedpage)
     {
-      include_once 'baglanti.php';
+      include_once 'BekraConenction.php';
             $sorgu=$db->prepare("insert into hackerip values (?,?,?,?)");
 
             $sorgu->bind_param("sssss",$hackerip,$attackquery,$attackthetime,$Attackedpage);

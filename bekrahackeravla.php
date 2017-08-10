@@ -20,8 +20,8 @@ foreach ($_GET as $get_key=>$get_value) {
 		$sayfaadi = $_SERVER["SCRIPT_FILENAME"];
 		for ($j = 0; $j < sizeof ($inj); ++$j ) {
 			if (preg_match("/".$inj[$j]."/", myUpperInjection($get_value))) {
-               $bekrainserti = new bekrainsert(); 
-               $bekrainserti->veri_ekle($ip_adresi,$get_key,$hackingtrh,$sayfaadi); 			   
+               $bekrainsert = new bekrainsert(); 
+               $bekrainsert->veri_ekle($ip_adresi,$get_key,$hackingtrh,$sayfaadi); 			   
 			}
 		}
 	}
